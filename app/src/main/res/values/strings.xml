@@ -10,4 +10,5 @@
     <string name="update">Update</string>
     <string name="show_all_users">Show All Users</string>
     <string name="enter_your_old_email_address">Enter your old email address:</string>
+    <string name="preference_file_key">com.mir.c04.PREFERENCE_FILE_KEY</string>
 </resources>

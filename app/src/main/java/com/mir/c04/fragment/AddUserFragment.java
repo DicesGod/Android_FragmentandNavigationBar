@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import com.mir.c04.MainActivity;
 import com.mir.c04.R;
 import com.mir.c04.connector.FragmentEventListener;
+import com.mir.c04.model.References;
 import com.mir.c04.model.User;
 
 import java.util.Arrays;
@@ -55,6 +57,7 @@ public class AddUserFragment extends Fragment {
                 String lastName = Arrays.asList(name.split(" ")).get(1);
                 clearFields(view);
                 fragmentEventListener.onUserAdded(new User(email, firstName, lastName));
+                References.savedReferences(v);
             }
         });
     }

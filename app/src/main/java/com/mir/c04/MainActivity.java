@@ -2,6 +2,7 @@ package com.mir.c04;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -9,12 +10,14 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.mir.c04.connector.FragmentEventListener;
 import com.mir.c04.dao.UserDao;
 import com.mir.c04.dao.UserFactory;
+import com.mir.c04.model.References;
 import com.mir.c04.model.User;
 import com.mir.c04.pager.ViewPagerAdapter;
 
@@ -48,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements FragmentEventList
 
         userDao = UserFactory.getUserDao();
         userDao.addUser(new User("admin@mir.com", "Mir", "Saadati"));
+
+        References.loadReferences(getWindow().getDecorView().getRootView());
     }
 
     @Override

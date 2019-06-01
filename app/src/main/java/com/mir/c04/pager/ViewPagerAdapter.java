@@ -1,5 +1,7 @@
 package com.mir.c04.pager;
 
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -9,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.mir.c04.fragment.AddUserFragment;
 import com.mir.c04.fragment.ListUserFragment;
 import com.mir.c04.fragment.UpdateUserFragment;
+import com.mir.c04.model.References;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
